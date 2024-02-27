@@ -12,7 +12,7 @@ namespace SixManFix
 
         #region Events
         [GameEventHandler(HookMode.Pre)]
-        public HookResult OnPlayerConnect(EventPlayerConnectFull @event, GameEventInfo info)
+        public HookResult OnPlayerConnectFull(EventPlayerConnectFull @event, GameEventInfo info)
         {
             var player = @event.Userid;
             if (!IsPlayerValid(player)) return HookResult.Continue;
