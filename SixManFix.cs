@@ -7,12 +7,12 @@ namespace SixManFix
     public class SixManFix : BasePlugin
     {
         public override string ModuleName => "SixManFix";
-        public override string ModuleVersion => "1.0.1";
+        public override string ModuleVersion => "1.0.2";
         public override string ModuleAuthor => "unfortunate";
 
         #region Events
         [GameEventHandler(HookMode.Pre)]
-        public HookResult OnPlayerConnectFull(EventPlayerConnectFull @event, GameEventInfo info)
+        public HookResult OnPlayerConnect(EventPlayerConnect @event, GameEventInfo info)
         {
             var player = @event.Userid;
             if (!IsPlayerValid(player)) return HookResult.Continue;
