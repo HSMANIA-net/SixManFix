@@ -11,7 +11,7 @@ public class SixManFix : BasePlugin
     public override string ModuleAuthor => "unfortunate";
 
     #region Events
-    [GameEventHandler(HookMode.Pre)]
+    [GameEventHandler(HookMode.Post)]
     public HookResult OnPlayerDisconnect(EventPlayerDisconnect @event, GameEventInfo info)
     {
         var player = @event.Userid;
